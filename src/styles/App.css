@@ -11,48 +11,64 @@ body {
 .columns {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Espacement entre les colonnes */
+  gap: 20px;
 }
 
 .task-list {
-  width: 45%; /* Chaque liste prend 45% de la largeur */
+  width: 45%;
   border: 1px solid #000000;
   padding: 10px;
   border-radius: 5px;
-  background-color: #0f256a; /* Fond léger pour la liste */
+  background-color: #0f256a;
 }
 
 .task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border: 1px solid #000000;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #ffffff; /* Fond blanc pour les éléments de la tâche */
+  background-color: #ffffff;
+}
+
+.drag-handle {
+  cursor: grab;
+  color: #666;
+  font-size: 20px;
+  padding: 0 5px;
+  user-select: none;
+}
+
+.task-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
 }
 
 button {
   margin-right: 5px;
-  padding: 8px 16px; /* Taille du bouton */
-  background-color: #007bff; /* Couleur du bouton */
-  color: #ffffff; /* Texte du bouton */
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
-  border-radius: 5px; /* Bord arrondi */
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3; /* Couleur plus foncée au survol */
+  background-color: #0056b3;
 }
 
-/* Responsivité : en dessous de 768px, les colonnes seront empilées */
 @media (max-width: 768px) {
   .columns {
-    flex-direction: column; /* Empiler les colonnes sur petits écrans */
+    flex-direction: column;
   }
 
   .task-list {
-    width: 100%; /* Chaque liste occupe toute la largeur */
-    margin-bottom: 20px; /* Ajout d'un espace entre les listes */
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

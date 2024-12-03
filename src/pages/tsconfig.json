@@ -1,5 +1,8 @@
+
 {
   "compilerOptions": {
+    "include": ["src"],
+    "exclude": ["node_modules"],
     "target": "esnext",
     "module": "esnext",
     "jsx": "react-jsx",
@@ -15,5 +18,6 @@
     }
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+
 }
